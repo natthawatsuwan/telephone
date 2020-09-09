@@ -1,0 +1,18 @@
+<br>new staff <a href=?controller=staff&action=newStaff>click</a><br>
+<table border = 1>
+<tr><td>ID</td><td>Name</td><td>Last
+Name</td><td>Position</td><td>update</td><td>delete</td></tr>
+<?php
+foreach($staff_list as $staff)
+{ echo "<tr>
+<td>$staff->id</td>
+<td>$staff->name</td>
+<td>$staff->lname</td>
+<td>$staff->posName</td>
+<td> update</td>
+<td>delete</td>
+</tr>";
+}
+echo "</table>";
+
+?>

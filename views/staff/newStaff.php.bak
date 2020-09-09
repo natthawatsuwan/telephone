@@ -1,0 +1,25 @@
+<form method="get" action="">
+<label>staffID <input type="text" name="staffID" /> </label><br>
+<label>Firstname <input type="text" name="name" /> </label><br>
+<label>Lastname <input type="text" name="lname" /> </label><br>
+<label>Position <select name="posID">
+<?php 
+foreach($position_list as $pos)
+{
+	echo "<option value= $pos->id> $pos->name</option>"; 
+}
+/*public function addStaff()
+{
+	$id = $_GET['staffID'];
+	$name = $_GET['name'];
+	$lname = $_GET['lname'];
+	$posID = $_GET['posID'];
+	Staff::Add($id,$name,$lname,$posID);
+	StaffController::index();
+}*/
+?>
+</select></label><br>
+<input type="hidden" name="controller" value="staff"/>
+<button type="submit" name="action" value="index"> Back</button>
+<button type="submit" name="action" value="addStaff"> Save</button>
+</form>
